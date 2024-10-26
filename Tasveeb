@@ -1,0 +1,31 @@
+// Constants for LED pins
+const int redPin = 10;    // Pin for the red LED
+const int yellowPin = 9;  // Pin for the yellow LED
+const int greenPin = 8;   // Pin for the green LED
+
+void setup() {
+    // Set the LED pins as outputs
+    pinMode(redPin, OUTPUT);
+    pinMode(yellowPin, OUTPUT);
+    pinMode(greenPin, OUTPUT);
+}
+
+void loop() {
+    // Red light for 5 seconds
+    digitalWrite(redPin, HIGH);
+    digitalWrite(yellowPin, LOW);
+    digitalWrite(greenPin, LOW);
+    delay(5000);
+
+    // Green light for 5 seconds
+    digitalWrite(redPin, LOW);
+    digitalWrite(yellowPin, LOW);
+    digitalWrite(greenPin, HIGH);
+    delay(5000);
+
+    // Yellow light for 2 seconds
+    digitalWrite(redPin, LOW);
+    digitalWrite(yellowPin, HIGH);
+    digitalWrite(greenPin, LOW);
+    delay(2000);
+}
